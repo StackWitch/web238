@@ -1,0 +1,65 @@
+/* style.css */
+
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* Gradient blue to white background */
+  background: linear-gradient(to bottom, #87cefa, #ffffff); /* sky blue to white */
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #004a80; /* darker blue for main title */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #005999; /* medium blue for section headings */
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(0,0,0,0.1); /* subtle separation */
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #004a80;
+  text-decoration: underline;
+}
+
+/* Page container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Optional subtle cards for content */
+body > h1, body > h2, body > p {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
