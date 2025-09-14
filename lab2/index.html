@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sadie Coleman">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airport Time Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Airport Time Calculator ✈️</h1>
+    <p>Enter your flight details and preferences to find out what time you should leave.</p>
+
+    <form id="calcForm">
+
+      <!-- Distance Mode (full width) -->
+      <div class="form-group full-width">
+        <label>
+          <input type="radio" name="distanceMode" value="manual" checked>
+          Enter my drive time manually
+        </label>
+        <label>
+          <input type="radio" name="distanceMode" value="auto">
+          Calculate automatically with my location (coming soon)
+        </label>
+      </div>
+
+      <!-- Drive Time and Flight Time (side by side) -->
+      <div class="form-group half-width" id="manualInputs">
+        <label for="drive">Drive Time to Airport (minutes):</label>
+        <input type="number" id="drive" required>
+      </div>
+
+      <div class="form-group half-width">
+        <label for="flight">Flight Time:</label>
+        <input type="time" id="flight" required>
+      </div>
+
+      <!-- International Flight (full width) -->
+      <div class="form-group full-width">
+        <label>
+          <input type="checkbox" id="international">
+          International Flight (coming soon)
+        </label>
+      </div>
+
+      <!-- Airport Size + Risk Tolerance (side by side) -->
+      <div class="form-group half-width">
+        <label for="airportSize">Airport Size / Busyness:</label>
+        <select id="airportSize">
+          <option value="small">Small Airport (small town)</option>
+          <option value="medium">Medium Airport (average traffic)</option>
+          <option value="large">High Traffic Airport</option>
+          <option value="veryLarge">Very High Traffic Airport (like ATL)</option>
+        </select>
+      </div>
+
+      <div class="form-group half-width">
+        <label for="riskTolerance">Risk Tolerance:</label>
+        <input type="range" id="riskTolerance" name="riskTolerance" min="45" max="120" value="60">
+        <span id="riskValue">60 minutes</span>
+      </div>
+
+      <!-- Extra Airport Factors (full width) -->
+      <fieldset class="form-group full-width">
+        <legend>Airport & Security Options</legend>
+        <label>
+          <input type="checkbox" id="tsa">
+          I have TSA PreCheck
+        </label>
+        <label>
+          <input type="checkbox" id="checkedBag">
+          I have checked baggage
+        </label>
+        <label>
+          <input type="checkbox" id="ada">
+          I need ADA assistance
+        </label>
+      </fieldset>
+
+      <!-- Eating & Parking (side by side) -->
+      <div class="form-group half-width">
+        <label for="eatTime">Time to eat (minutes):</label>
+        <input type="number" id="eatTime" value="0">
+      </div>
+
+      <div class="form-group half-width">
+        <label for="parkingTime">Parking / walk time (minutes):</label>
+        <input type="number" id="parkingTime" value="0">
+      </div>
+
+      <!-- Submit Button (full width) -->
+      <div class="form-group full-width">
+        <button type="submit" id="calcBtn">Calculate Leave Time</button>
+      </div>
+
+      <!-- Result (full width) -->
+      <div id="result" class="full-width"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
