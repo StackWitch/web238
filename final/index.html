@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EuroGeo Guesser</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>EuroGeo Guesser</h1>
+  <p>Guess the European city and learn a fun fact!</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="fact.html">Fact Page</a>
+  </nav>
+</header>
+
+<div class="section" id="game">
+  <h2>Guess the City</h2>
+  <img src="https://via.placeholder.com/300x200" alt="City Image" class="city-image" id="cityImage">
+  
+  <div id="choices">
+    <button class="choice-btn">Option 1</button>
+    <button class="choice-btn">Option 2</button>
+    <button class="choice-btn">Option 3</button>
+    <button class="choice-btn">Option 4</button>
+  </div>
+
+  <div id="score">
+    <p>Score: <span id="points">0</span></p>
+  </div>
+
+  <div id="feedback"></div>
+</div>
+
+<div class="section" id="fact">
+  <h2>City Fact</h2>
+  <p id="factText"></p>
+</div>
+
+<footer>
+  <p>Created by Sadie Coleman.</p>
+</footer>
+
+</body>
+</html>
