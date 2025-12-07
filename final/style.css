@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+main, .section {
+  flex: 1;
+  padding: 2em 1em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+header {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 2em 1em;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+.section {
+  padding: 2em 1em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.city-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 1em 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.city-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#feedback {
+  display: none;
+  margin: 1em 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#fact {
+  display: none;
+  margin-top: 1em;
+  background: #fff;
+  padding: 1.2em;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  font-size: 1em;
+}
+
+#score {
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+#nextCity {
+  display: none;
+  margin-top: 1em;
+  background: #10b981;
+}
+
+#nextCity:hover {
+  background: #059669;
+}
+
+
+footer {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 1.5em 1em;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 2px solid #e5e7eb;
+}
+footer p {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.4em 0;
+  }
+
+  .choice-btn {
+    display: block;
+    width: 80%;
+    margin: 0.5em auto;
+  }
+
+  #cityImage {
+    max-width: 90%;
+  }
+}
